@@ -19,7 +19,7 @@
       "userContact": "8558906689",
       "userGender": "Male",
       "userAge": "20",
-      "approvalStatus": true
+      "approvalStatus": false
     },
     {
       "id": 3,
@@ -34,14 +34,14 @@
     },
     {
       "id": 4,
-      "password": "rajat06",
       "userName": "Rajat",
+      "password": "rajat06",
       "userRole": "Doctor",
       "userAddress": "Tamil Nadu",
       "userContact": "8558906689",
       "userGender": "Male",
       "userAge": "20",
-      "approvalStatus": false
+      "approvalStatus": true
     },
     {
       "id": "5",
@@ -51,7 +51,7 @@
       "userContact": "1234567898",
       "userGender": "Male",
       "userAge": "23",
-      "approvalStatus": true
+      "approvalStatus": false
     },
     {
       "id": "7",
@@ -94,6 +94,16 @@
       "userContact": "1234567898",
       "userGender": "Female",
       "userAge": "15",
+      "approvalStatus": true
+    },
+    {
+      "id": "11",
+      "userName": "Chhavi",
+      "userRole": "patient",
+      "userAddress": "Chandigarh",
+      "userContact": "77788877789",
+      "userGender": "female",
+      "userAge": "20",
       "approvalStatus": true
     }
   ],

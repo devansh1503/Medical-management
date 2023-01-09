@@ -18,7 +18,7 @@ function About() {
                 <h1>
                     About Us!
                 </h1>
-                <div style={{ width: '60%' }}>
+                <div className='abouttxt'>
                     <p style={{fontSize:'25px'}}>
                         This is a medical management Full Stack Web project built by Devansh Abrol. The application is built using MERN stack,
                         A user can perform CRUD operations on the data, there are three types of users- Patients, Doctors, Admins, and the three

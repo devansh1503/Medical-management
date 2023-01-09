@@ -42,6 +42,7 @@ body{
   flex-direction: column;
   border-radius: 18px;
   box-shadow: 10px 10px 18px 5px #111111;
+  width: fit-content;
 }
 .start *{
   margin: 20px;
@@ -73,7 +74,6 @@ input{
   color: black;
   border: none;
   border-bottom: 2px solid black;
-  width: 30vw;
 }
 .reg{
   background-color: rgba(255, 255, 255, 0.768);
@@ -173,6 +173,9 @@ th{
 .imghead{
   margin:-350px 0px 0px 0px
 }
+.abouttxt{
+  width: 60%;
+}
 
 @media screen and (max-width:600px){
   body{
@@ -201,5 +204,26 @@ th{
   .imghead{
     margin:-20px 0px 0px 0px
   }
-  
+  .start{
+    width: 90vw;
+  }
+  .top{
+    flex-direction: column;
+  }
+  .top *{
+    margin-top: 20px;
+  }
+  .bottom{
+    flex-direction: column;
+  }
+  .image img{
+    width: 50vw;
+  }
+  .users{
+    width: fit-content;
+    overflow-x: auto;
+  }
+  .abouttxt{
+    width: 90%;
+  }
 }

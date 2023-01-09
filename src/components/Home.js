@@ -14,7 +14,7 @@ function Home() {
             <div className='top'>
                 <div className='image'>
                     {(imglink===null) ?(ctx.currUser.userGender === "Male" ?<img src={require('../male.png')} />:<img src={require('../female.png')} />):<img style={{height:"250px",width:"270px", marginRight:"200px"}} src={imglink}/>}
-                    {edit?<div style={{fontSize:"20px", padding:"10px", backgroundColor:"crimson", color:"white", width:"fit-content"}} onClick={()=>{setEdit(false)}}>Change Image</div>:<Uploadimg editimg={setEdit}/>}
+                    {edit?<div style={{display:'none',fontSize:"20px", padding:"10px", backgroundColor:"crimson", color:"white", width:"fit-content"}} onClick={()=>{setEdit(false)}}>Change Image</div>:<Uploadimg editimg={setEdit}/>}
                 </div>
                 <div className='details'>
                     <div className='det'>

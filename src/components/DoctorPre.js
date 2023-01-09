@@ -9,7 +9,7 @@ function DoctorPre() {
     const dosage = useRef();
     const days = useRef();
     const remarks = useRef();
-    const url = "http://localhost:3333/prescription"
+    const url = "https://medical-api.vercel.app/pres"
     const history = useNavigate()
     const[len,setLen] = useState(0)
     useEffect(()=>{
@@ -36,7 +36,7 @@ function DoctorPre() {
     return (
         <div className='startpage'>
             <form className='reg'>
-                <input ref={patid} placeholder='Enter Patient ID' />
+                <input ref={patid} placeholder='Enter Patient username' />
                 <input ref={date} placeholder='Enter Date' />
                 <input ref={medicene} placeholder='Enter Medicene Name' />
                 <input ref={dosage} placeholder='Enter Dosage' />

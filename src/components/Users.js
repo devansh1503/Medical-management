@@ -9,7 +9,7 @@ function Users() {
     //console.log(ctx.currUser)
     const role = ctx.currUser.userRole.toLowerCase()
     console.log(role)
-    const url = "http://localhost:3333/users"
+    const url = "https://medical-api.vercel.app/users"
     const [data, setData] = useState([])
     useEffect(() => {
         async function fetchData() {
@@ -58,7 +58,7 @@ function Users() {
                                             "userAge": item.userAge,
                                             "approvalStatus": true
                                           }
-                                        await axios.put(`${url}/${item.id}`,newUse)
+                                        await axios.post(`${url}post`,newUse)
                                         //history('/home')
                                     }
                                     udpateData()
@@ -66,7 +66,7 @@ function Users() {
                                 <td>{role==='admin' && <button style={{color:"white",backgroundColor:"crimson"}}
                                  onClick={()=>{
                                     async function deleteData(){
-                                        await axios.delete(`http://localhost:3333/users/${item.id}`)
+                                        await axios.delete(`https://medical-api.vercel.app/usersdelete/${item.id}`)
                                     }
                                     deleteData()
                                  }}>Delete</button>}</td>

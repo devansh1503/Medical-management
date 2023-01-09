@@ -4,7 +4,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 function PatientAppoint() {
-    const url = "http://localhost:3333/appointment"
+    const url = "https://medical-api.vercel.app/appoint"
     const[len,setLen] = useState(0)
     useEffect(()=>{
         async function fetchData(){
@@ -35,10 +35,10 @@ function PatientAppoint() {
     return (
         <div className='startpage'>
             <form className='reg'>
-                <input ref={patid} placeholder='Enter Your ID'/>
+                <input ref={patid} placeholder='Enter Your Name'/>
                 <input ref={appdata} placeholder='Enter Your Available Date'/>
                 <input ref={hprob} placeholder='Enter Your Health Problem'/>
-                <input ref={did} placeholder='Enter ID of your Prefered Doctor'/>
+                <input ref={did} placeholder='Enter name of your Prefered Doctor'/>
                 <button onClick={addAppointment} style={{color:"white",fontSize:"20px"}}>Submit</button>
             </form>
 

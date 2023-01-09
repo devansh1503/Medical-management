@@ -12,7 +12,7 @@ function Register() {
   const address = useRef();
   const gender = useRef();
   const age = useRef();
-  const url = "http://localhost:3333/users"
+  const url = "https://medical-api.vercel.app/users"
   const[len,setLen] = useState(0)
   const passwords = []
   useEffect(()=>{
@@ -39,7 +39,7 @@ function Register() {
       "userAge": age.current.value,
       "approvalStatus": (role.current.value.toLowerCase()==="admin" ? true : false)
     }
-    await axios.post(url,user);
+    await axios.post("https://medical-api.vercel.app/userspost",user);
   }
 
    const checkpassword = (event) =>{

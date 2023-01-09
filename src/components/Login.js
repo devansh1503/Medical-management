@@ -8,18 +8,20 @@ function Login() {
     const ctx = useContext(GlobalObj)
     const [notfound, setFound] = useState(false);
     const name = useRef()
+    const pass = useRef()
     const history = useNavigate()
     localStorage.removeItem('image')
     const getUser = async(event) => {
         event.preventDefault()
-        await axios.get(`http://localhost:3333/users?password=${id}&userName=${name.current.value}`)
+        await axios.get(`https://medical-api.vercel.app/users/${pass.current.value}/${name.current.value}`)
         .then((response)=>{
-            if(name.current.value!==response.data[0].userName){
+            console.log(response)
+            if(name.current.value!==response.data.userName){
                 console.log('wrong name'+name.current.value+" "+response.data[0].userName)
                 setFound(true)
                 return;
             }
-            ctx.changeUser(response.data[0])
+            ctx.changeUser(response.data)
             history('/home')
         })
         .catch((error)=>{
@@ -39,7 +41,7 @@ function Login() {
         <div className='startpage'>
             <form className='start'>
                 <input placeholder='Enter Your Name' ref={name} />
-                <input type='password' onChange={onchangehandle} placeholder='Enter Your password'/>
+                <input type='password'ref={pass} onChange={onchangehandle} placeholder='Enter Your password'/>
                 <button onClick={getUser} style={{color:"white",fontSize:"20px"}}>Login</button>
             </form>
             <div>

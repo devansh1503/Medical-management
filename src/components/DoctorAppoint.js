@@ -4,9 +4,9 @@ import GlobalObj from '../store/global-object'
 
 function DoctorAppoint() {
     const ctx = useContext(GlobalObj)
-    const id = ctx.currUser.id
+    const id = ctx.currUser.userName
     const [data, setData] = useState([])
-    const url = `http://localhost:3333/appointment?doctorId=${id}`
+    const url = `https://medical-api.vercel.app/appoint/${id}`
     useEffect(() => {
         async function fetchData() {
             const response = await axios.get(url)
@@ -18,11 +18,11 @@ function DoctorAppoint() {
         <div className='users'>
             <table>
                 <tr>
-                    <th>Patient ID</th>
+                    <th>Patient Name</th>
                     <th>Appointment Date</th>
                     <th>Health Problem</th>
                     <th>Appointment Status</th>
-                    <th>Doctor ID</th>
+                    <th>Doctor Name</th>
                 </tr>
                 {
                     data.map((item) => {

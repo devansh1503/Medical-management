@@ -12,7 +12,7 @@ function Edituser() {
     const address = useRef()
     const gender = useRef()
     const age = useRef()
-    const url = `http://localhost:3333/users/${ctx.currUser.id}`
+    const url = `https://medical-api.vercel.app/users/${ctx.currUser.id}`
     const history = useNavigate()
     const onclickhandle = async(event) => {
         event.preventDefault()

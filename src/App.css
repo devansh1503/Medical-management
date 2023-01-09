@@ -6,6 +6,7 @@
 body{
   overflow-x: hidden;
   background-image: url('https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjQ2MS10YXVzLTE0YS1tb2Rlcm5ibGFja2FuZHdoaXRlXzEuanBn.jpg?s=W0LYP7iDIEyifrzzV0wWOZzGw5If2GeM0Yo7BiRCPNw');
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .navbar{
@@ -15,6 +16,10 @@ body{
   color: rgb(54, 54, 54);
   background-color: rgb(255, 255, 255);
   padding: 4px;
+  width: 100%;
+  z-index: 3;
+  position: sticky;
+  top: 0%;
 }
 .navbar ul{
   display: flex;
@@ -155,4 +160,46 @@ th{
 }
 .userOptions *{
   margin:20px;
+}
+.burger{
+  display: none;
+}
+.box{
+  max-width: 25vw;
+}
+.heading h1{
+  font-size: 100px;
+}
+.imghead{
+  margin:-350px 0px 0px 0px
+}
+
+@media screen and (max-width:600px){
+  body{
+    background: none;
+  }
+  .navbar{
+    box-shadow: 0px 0px 10px 5px black;
+  }
+  .navbar ul{
+    flex-direction: column;
+    display: none;
+  }
+  .burger{
+    display: block;
+  }
+  .boxes{
+    flex-direction: column;
+    align-items:center;
+  }
+  .box{
+    max-width: 70vw;
+  }
+  .heading h1{
+    font-size: 50px;
+  }
+  .imghead{
+    margin:-20px 0px 0px 0px
+  }
+  
 }

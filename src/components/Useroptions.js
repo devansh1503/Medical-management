@@ -5,12 +5,13 @@ function Useroptions() {
     const cssmain = {
         width: 'fit-content',
         backgroundColor:'white',
-        position:'absolute',
+        position:'fixed',
         right:'0',
         marginRight:'30px',
         borderBottomLeftRadius:'25px',
         borderBottomRightRadius:'25px',
-        boxShadow:'10px 10px 14px 5px black'
+        boxShadow:'10px 10px 14px 5px black',
+        zIndex:'3'
     }
     return (
         <div style={cssmain}>

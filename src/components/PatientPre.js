@@ -5,7 +5,7 @@ import GlobalObj from '../store/global-object'
 function PatientPre() {
     const ctx = useContext(GlobalObj)
     const id = ctx.currUser.userName
-    const url = `https://medical-api.vercel.app//pres/${id}`
+    const url = `https://medical-api.vercel.app/pres/${id}`
     const[data,setData] = useState([])
     useEffect(()=>{
         async function fetchData(){

@@ -28,7 +28,7 @@ function Navbar(props) {
       <h1>🩺 HeartCare</h1>
       <ul style={stl}>
         <li><Link to='/home' className='linkText'>Home</Link></li><hr></hr>
-        <li><Link to='/articles' className='linkText'>Articles</Link></li><hr></hr>
+        <li><Link to='/fitness' className='linkText'>Fitness Tools</Link></li><hr></hr>
         <li><Link to='/aiproducts' className='linkText'>Artificial Intelligence Products</Link></li><hr></hr>
         <li><Link to='/about' className='linkText'>About Us</Link></li>
       </ul>

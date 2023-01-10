@@ -14,6 +14,7 @@ import Useroptions from './components/Useroptions';
 import { useState } from 'react';
 import Homepage from './components/Homepage';
 import About from './components/About';
+import Fitness from './components/Fitness';
 
 function App() {
   const [userOpt, setUseropt] = useState(false)
@@ -29,6 +30,7 @@ function App() {
             <Route path='/register' element={<Register></Register>}></Route>
             <Route path='/home' element={<Homepage></Homepage>}></Route>
             <Route path='/about' element={<About></About>}></Route>
+            <Route path='/fitness' element={<Fitness></Fitness>}></Route>
             <Route path='/userDashboard' element={<Home></Home>}></Route>
             <Route path='/users' element={<Users></Users>}></Route>
             <Route path='/appointment' element={<Appointment></Appointment>}></Route>

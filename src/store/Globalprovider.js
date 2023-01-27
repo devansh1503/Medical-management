@@ -8,7 +8,7 @@ const defaultValue = {
 const globReducer = (state,action) => {
     if(action.type === "ADD"){
         const newUser = action.item
-        console.log(action.item)
+        console.log(action.item, "added successfully")
         return{
             currUser:newUser
         }

@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import GlobalObj from '../store/global-object'
 
-function Users() {
+function Users(props) {
     const ctx = useContext(GlobalObj)
     //console.log(ctx.currUser)
     const role = ctx.currUser.userRole.toLowerCase()
@@ -19,6 +19,9 @@ function Users() {
         }
         fetchData()
     }, [data])
+    useEffect(()=>{
+        props.setOpt(false)
+    },[])
     const history = useNavigate()
 
     return (
@@ -38,7 +41,7 @@ function Users() {
                     data.map((item) => {
                         return (
                             <tr>
-                                <td>{item.userName}</td>
+                                <td>{item.fullName}</td>
                                 <td>{item.userRole}</td>
                                 <td>{item.userAddress}</td>
                                 <td>{item.userContact}</td>

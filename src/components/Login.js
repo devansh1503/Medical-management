@@ -3,7 +3,7 @@ import React, { useContext, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { getallUsers } from '../service/api';
 import GlobalObj from '../store/global-object';
-function Login() {
+function Login(props) {
     const[bool, setBool] = useState(false)
     const [id, setId] = useState(1);
     const ctx = useContext(GlobalObj)
@@ -15,7 +15,10 @@ function Login() {
     const getUser = async (event) => {
         event.preventDefault()
         setBool(true)
-        await axios.get(`https://medical-api.vercel.app/users/${pass.current.value}/${name.current.value}`)
+        await axios.get(`https://medical-api.vercel.app/users/${pass.current.value}/${name.current.value}`,{
+            withCredentials: true,
+            headers: { 'Content-Type': 'multipart/form-data' },
+        })
             .then((response) => {
                 console.log(response)
                 if (name.current.value !== response.data.userName) {
@@ -23,9 +26,11 @@ function Login() {
                     setFound(true)
                     return;
                 }
+                localStorage.setItem("userName",response.data.userName)
                 ctx.changeUser(response.data)
                 setBool(false)
-                history('/home')
+                props.setLoggedIn(true)
+                history('/')
             })
             .catch((error) => {
                 if (error.request) {
@@ -34,6 +39,7 @@ function Login() {
                 else {
                     setFound(true)
                 }
+                setBool(false)
             })
     }
     const onchangehandle = async (event) => {

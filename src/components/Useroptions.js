@@ -1,7 +1,9 @@
+import axios from 'axios'
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Useroptions() {
+    const history = useNavigate()
     const cssmain = {
         width: 'fit-content',
         backgroundColor:'white',
@@ -20,7 +22,7 @@ function Useroptions() {
                 <li><Link to='/appointment' className='linkText'>Appointment</Link></li><hr></hr>
                 <li><Link to='/prescription' className='linkText'>Prescription</Link></li><hr></hr>
                 <li><Link to='/users' className='linkText'>Users</Link></li><hr></hr>
-                <li><Link to='/' className='linkText'>Log Out</Link></li>
+                <li><Link to='/home' className='linkText'>Log Out</Link></li>
             </ul>
         </div>
     )

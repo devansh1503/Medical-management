@@ -7,6 +7,7 @@ function Register() {
   const name = useRef();
   //const pass = useRef();
   const id = useRef();
+  const fullname = useRef();
   const role = useRef();
   const contact = useRef();
   const address = useRef();
@@ -29,9 +30,10 @@ function Register() {
 
   const onclickhandle = async() => {
     const user = {
-      "id": id.current.value,
+      "email": id.current.value,
       "password":password,
       "userName": name.current.value,
+      "fullName": fullname.current.value,
       "userRole": role.current.value,
       "userAddress": address.current.value,
       "userContact": contact.current.value,
@@ -48,10 +50,11 @@ function Register() {
   return (
     <div className='startpage'>
       <form className='reg'>
-        <input ref={name} placeholder='Enter Your Name' />
+        <input ref={name} placeholder='Enter Your username' />
+        <input ref={fullname} placeholder='Enter Your Full Name' />
         {/* {right ? <div>can't</div> : <div></div>} */}
         <input onChange={checkpassword} placeholder='Enter a New Password'/>
-        <input ref={id} placeholder='Enter ID' value={len} />
+        <input ref={id} placeholder='Enter email' />
         <input ref={role} placeholder='Enter Your Role' />
         <input ref={contact} placeholder='Enter Your Contact' />
         <input ref={address} placeholder='Enter Your Address' />

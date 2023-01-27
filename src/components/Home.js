@@ -1,14 +1,16 @@
 import { Link } from 'react-router-dom'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import GlobalObj from '../store/global-object'
 import Uploadimg from './Uploadimg'
-function Home() {
+function Home(props) {
     const ctx = useContext(GlobalObj)
     const[edit,setEdit] = useState(true)
-    console.log("data "+ctx.currUser)
     const imglink = localStorage.getItem('image')
     console.log(imglink)
-
+    useEffect(()=>{
+        console.log(ctx.currUser)
+        props.setOpt(false)
+      },[])
     return (
         <div className='home'>
             <div className='top'>

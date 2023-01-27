@@ -1,9 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import GlobalObj from '../store/global-object'
 import DoctorPre from './DoctorPre'
 import PatientPre from './PatientPre'
 
-function Prescription() {
+function Prescription(props) {
+  useEffect(()=>{
+    props.setOpt(false)
+  },[])
   const ctx = useContext(GlobalObj)
   const role = ctx.currUser.userRole.toLowerCase()
   return (

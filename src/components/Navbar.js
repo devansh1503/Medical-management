@@ -27,16 +27,19 @@ function Navbar(props) {
       <div onClick={onBurger}><img className='burger' style={{ width: '30px' }} src='https://cdn-icons-png.flaticon.com/512/6499/6499731.png'></img></div>
       <h1>🩺 HeartCare</h1>
       <ul style={stl}>
-        <li><Link to='/home' className='linkText'>Home</Link></li><hr></hr>
+        <li><Link to='/' className='linkText'>Home</Link></li><hr></hr>
         <li><Link to='/fitness' className='linkText'>Fitness Tools</Link></li><hr></hr>
         <li><Link to='/aiproducts' className='linkText'>Artificial Intelligence Products</Link></li><hr></hr>
         <li><Link to='/about' className='linkText'>About Us</Link></li>
       </ul>
-      <div>
+      {props.loggedIn && <div>
         <img onClick={() => {
           props.setOpt(!props.opt)
         }} src='https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png' style={{ width: '50px', cursor: 'pointer' }}></img>
-      </div>
+      </div>}
+      {!props.loggedIn && <div>
+        <button style={{backgroundColor:'tomato'}}><Link to='/home' className='linkText'>Login/Register</Link></button>
+      </div>}
     </div>
   )
 }

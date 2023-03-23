@@ -18,6 +18,7 @@ import Fitness from './components/Fitness';
 import axios from 'axios';
 import Cookies from 'js-cookie'
 import GlobalObj from './store/global-object';
+import Chatpage from './components/Chatpage';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -41,6 +42,7 @@ function App() {
             <Route path='/register' element={<Register setOpt={setUseropt}></Register>}></Route>
             <Route path='/' element={<Homepage setOpt={setUseropt}></Homepage>}></Route>
             <Route path='/about' element={<About setOpt={setUseropt}></About>}></Route>
+            <Route path='/chatpage' element={<Chatpage></Chatpage>}></Route>
             <Route path='/fitness' element={<Fitness setOpt={setUseropt}></Fitness>}></Route>
             <Route path='/userDashboard' element={<Home setOpt={setUseropt}></Home>}></Route>
             <Route path='/users' element={<Users setOpt={setUseropt}></Users>}></Route>

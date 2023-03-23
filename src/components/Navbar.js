@@ -29,7 +29,7 @@ function Navbar(props) {
       <ul style={stl}>
         <li><Link to='/' className='linkText'>Home</Link></li><hr></hr>
         <li><Link to='/fitness' className='linkText'>Fitness Tools</Link></li><hr></hr>
-        <li><Link to='/aiproducts' className='linkText'>Artificial Intelligence Products</Link></li><hr></hr>
+        <li><Link to='/chatpage' className='linkText'>Chat With Doc</Link></li><hr></hr>
         <li><Link to='/about' className='linkText'>About Us</Link></li>
       </ul>
       {props.loggedIn && <div>

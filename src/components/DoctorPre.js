@@ -1,6 +1,7 @@
 import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import GlobalObj from '../store/global-object';
 
 function DoctorPre() {
     const patid = useRef();
@@ -9,7 +10,8 @@ function DoctorPre() {
     const dosage = useRef();
     const days = useRef();
     const remarks = useRef();
-    const url = "https://medical-api.vercel.app/pres"
+    const ctx = useContext(GlobalObj)
+    const url = `https://medical-api.vercel.app/pres`
     const history = useNavigate()
     const[len,setLen] = useState(0)
     useEffect(()=>{

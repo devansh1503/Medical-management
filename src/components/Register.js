@@ -1,7 +1,9 @@
 import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
+import GlobalObj from '../store/global-object';
 function Register() {
+  const ctx = useContext(GlobalObj)
   const[password, setpass] = useState("")
   const[right,setright] = useState(false)
   const name = useRef();
@@ -13,7 +15,7 @@ function Register() {
   const address = useRef();
   const gender = useRef();
   const age = useRef();
-  const url = "https://medical-api.vercel.app/users"
+  const url = `${ctx.apiUrl}/users`
   const[len,setLen] = useState(0)
   const passwords = []
   useEffect(()=>{
@@ -41,7 +43,7 @@ function Register() {
       "userAge": age.current.value,
       "approvalStatus": (role.current.value.toLowerCase()==="admin" ? true : false)
     }
-    await axios.post("https://medical-api.vercel.app/userspost",user);
+    await axios.post(`https://medical-api.vercel.app/userspost`,user);
   }
 
    const checkpassword = (event) =>{
@@ -53,7 +55,7 @@ function Register() {
         <input ref={name} placeholder='Enter Your username' />
         <input ref={fullname} placeholder='Enter Your Full Name' />
         {/* {right ? <div>can't</div> : <div></div>} */}
-        <input onChange={checkpassword} placeholder='Enter a New Password'/>
+        <input onChange={checkpassword} type="password" placeholder='Enter a New Password'/>
         <input ref={id} placeholder='Enter email' />
         <input ref={role} placeholder='Enter Your Role' />
         <input ref={contact} placeholder='Enter Your Contact' />

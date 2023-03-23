@@ -1,11 +1,13 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import GlobalObj from '../store/global-object'
 
 function StartingPage(props) {
+  const ctx = useContext(GlobalObj)
   useEffect(() => {
     async function logOut(){
-      await axios.get('https://medical-api.vercel.app/logout',{
+      await axios.get(`https://medical-api.vercel.app/logout`,{
         withCredentials:true,
       })
     }

@@ -2,6 +2,7 @@ import { useReducer } from "react"
 import GlobalObj from "./global-object"
 
 const defaultValue = {
+    apiUrl:"http://localhost:7000",
     currUser:{}
 }
 
@@ -21,6 +22,7 @@ function Globalprovider(props){
         dispatchAction({type:"ADD", item:item})
     }
     const globcontext = {
+        apiUrl:globstate.apiUrl,
         currUser:globstate.currUser,
         changeUser:addUserHandle
     }

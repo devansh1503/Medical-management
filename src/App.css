@@ -176,6 +176,52 @@ th{
 .abouttxt{
   width: 60%;
 }
+
+/* CHAT PAGE */
+
+.chatmain{
+  display: flex;
+  font-size: 25px;
+  padding: 50px;
+}
+.chatmain *{
+  margin-right: 20px;
+}
+.userslist{
+  background-color: white;
+  padding: 10px;
+  border-radius: 25px;
+}
+.userslist ul{
+  list-style-type: none;
+}
+.userslist ul *{
+  margin-top: 20px;
+  cursor: pointer;
+  color: crimson;
+
+}
+.chatsection{
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.secchat{
+  width: 100%;
+  height: 70vh;
+  background-color: rgb(175, 175, 175);
+  overflow: auto;
+  border-radius: 25px;
+}
+
+.chatform{
+  margin: 10px;
+}
+.chatform input{
+  width: 50vw;
+}
 .pac-man {
   position: absolute;
   top: 40%;
@@ -213,6 +259,9 @@ th{
   margin-left: calc(25px);
   transform-origin: center;
   animation: center .5s infinite, ball .5s -0.33s infinite linear;
+}
+.peace{
+  background-color: rgb(205, 1, 205);
 }
 @keyframes eating-top {
   0% {

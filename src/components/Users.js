@@ -9,7 +9,7 @@ function Users(props) {
     //console.log(ctx.currUser)
     const role = ctx.currUser.userRole.toLowerCase()
     console.log(role)
-    const url = "https://medical-api.vercel.app/users"
+    const url = `https://medical-api.vercel.app/users`
     const [data, setData] = useState([])
     useEffect(() => {
         async function fetchData() {

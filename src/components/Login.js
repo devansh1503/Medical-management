@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { getallUsers } from '../service/api';
 import GlobalObj from '../store/global-object';
 function Login(props) {
-    const[bool, setBool] = useState(false)
+    const [bool, setBool] = useState(false)
     const [id, setId] = useState(1);
     const ctx = useContext(GlobalObj)
     const [notfound, setFound] = useState(false);
@@ -15,7 +15,8 @@ function Login(props) {
     const getUser = async (event) => {
         event.preventDefault()
         setBool(true)
-        await axios.get(`https://medical-api.vercel.app/users/${pass.current.value}/${name.current.value}`,{
+        const url = `https://medical-api.vercel.app/users/${pass.current.value}/${name.current.value}`
+        await axios.get(url, {
             withCredentials: true,
             headers: { 'Content-Type': 'multipart/form-data' },
         })
@@ -26,7 +27,7 @@ function Login(props) {
                     setFound(true)
                     return;
                 }
-                localStorage.setItem("userName",response.data.userName)
+                localStorage.setItem("userName", response.data.userName)
                 ctx.changeUser(response.data)
                 setBool(false)
                 props.setLoggedIn(true)

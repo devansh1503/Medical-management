@@ -1,10 +1,12 @@
 import { appendOwnerState } from '@mui/base'
 import axios from 'axios'
-import React, { useEffect, useMemo, useRef, useState } from 'react'
+import React, { useContext, useEffect, useMemo, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import GlobalObj from '../store/global-object'
 
 function PatientAppoint() {
-    const url = "https://medical-api.vercel.app/appoint"
+    const ctx = useContext(GlobalObj)
+    const url = `https://medical-api.vercel.app/appoint`
     const[len,setLen] = useState(0)
     useEffect(()=>{
         async function fetchData(){

@@ -5,9 +5,9 @@
 }
 body{
   overflow-x: hidden;
+  background-image: url("https://img.freepik.com/premium-vector/silhouettes-identical-leaves-seamless-pattern-hand-drawn-illustration-simple-scandinavian-doodle-cartoon-style-isolated-gray-blue-branches-white-background_165705-184.jpg?w=2000");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgb(241, 241, 241);
 }
 .navbar{
   display: flex;
@@ -49,8 +49,8 @@ body{
 }
 .linkText{
   text-decoration: none;
-  font-size: 20px;
-  color: rgb(56, 56, 56);
+  font-size: 25px;
+  color: rgb(89, 89, 89);
 }
 .linkText:hover{
   color: crimson;
@@ -69,11 +69,11 @@ button{
   font-size: 20px;
 }
 input{
-  background: none;
-  font-size: 20px;
-  color: black;
+  background-color: rgb(223, 223, 223);
+  font-size: 23px;
+  padding: 10px;
   border: none;
-  border-bottom: 2px solid black;
+  border-radius: 25px;
 }
 .reg{
   background-color: rgba(255, 255, 255, 0.768);
@@ -262,6 +262,50 @@ th{
 }
 .peace{
   background-color: rgb(205, 1, 205);
+}
+.main-box{
+  background-color: white;
+  border-radius: 15px;
+  margin-top: 40px;
+  box-shadow: 10px 10px 18px 5px #111111;
+}
+.start-nav{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  box-shadow: 0px 10px 24px 0px #111111;
+
+}
+.signnav{
+  font-size: 25px;
+  color: rgb(108, 108, 108);
+  padding: 0px 15px 0px 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.signnav:hover{
+  border-bottom: solid 2px rgb(108, 108, 108);
+}
+.box-data{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}
+.box-data img{
+  width: 51%;
+}
+.signupbtn{
+  background-color: rgb(0, 195, 255);
+  color: white;
+  padding: 15px;
+  width: fit-content;
+}
+.namedet{
+  padding: 20px;
+}
+.namedet *{
+  margin-right: 20px;
 }
 @keyframes eating-top {
   0% {

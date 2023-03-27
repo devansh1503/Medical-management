@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useContext, useEffect } from 'react'
 import GlobalObj from '../store/global-object'
 import Dabbe from './Dabbe'
+import Newsarticles from './Newsarticles'
 
 function Homepage(props) {
   const ctx = useContext(GlobalObj)
@@ -50,6 +51,7 @@ function Homepage(props) {
         <Dabbe src={'https://cdn.pixabay.com/photo/2017/05/15/23/47/stethoscope-icon-2316460__480.png'} title={'Doctors'} des={'Our Ambulance Service is always ready 24/7, just call the emergency number which is - +91 8889998889'}></Dabbe>
         <Dabbe src={'https://cdn.pixabay.com/photo/2017/05/15/21/58/drug-icon-2316244_1280.png'} title={'Prescription'} des={'Our Ambulance Service is always ready 24/7, just call the emergency number which is - +91 8889998889'}></Dabbe>
       </div>
+      {/* <Newsarticles></Newsarticles> */}
 
     </div>
   )

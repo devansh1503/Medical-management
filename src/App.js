@@ -24,6 +24,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   const [userOpt, setUseropt] = useState(false)
   const [userData, setUserData] = useState({})
+  const [role, setRole] = useState("Patient")
   useEffect(() => {
     const token = Cookies.get('loginCookie')
     if (token) {
@@ -37,9 +38,9 @@ function App() {
           <Navbar opt={userOpt} setOpt={setUseropt} loggedIn={loggedIn}></Navbar>
           {userOpt && <Useroptions></Useroptions>}
           <Routes>
-            <Route path='/home' element={<StartingPage setOpt={setUseropt} setLoggedIn={setLoggedIn}></StartingPage>}></Route>
+            <Route path='/home' element={<StartingPage setOpt={setUseropt} setLoggedIn={setLoggedIn} setRole={setRole}></StartingPage>}></Route>
             <Route path='/login' element={<Login setOpt={setUseropt} setLoggedIn={setLoggedIn}></Login>}></Route>
-            <Route path='/register' element={<Register setOpt={setUseropt}></Register>}></Route>
+            <Route path='/register' element={<Register role={role} setOpt={setUseropt}></Register>}></Route>
             <Route path='/' element={<Homepage setOpt={setUseropt}></Homepage>}></Route>
             <Route path='/about' element={<About setOpt={setUseropt}></About>}></Route>
             <Route path='/chatpage' element={<Chatpage></Chatpage>}></Route>

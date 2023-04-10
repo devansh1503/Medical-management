@@ -49,7 +49,7 @@ function StartingPage(props) {
             {patient && <div className='signupbtn'><Link to='/register' className='linkText' style={{ color: 'white', fontSize: '27px' }}>Sign-Up As A Patient</Link></div>}
             {doctor && <div className='signupbtn'><Link to='/register' className='linkText' style={{ color: 'white', fontSize: '27px' }}>Sign-Up As A Doctor</Link></div>}
             {admin && <div className='signupbtn'><Link to='/register' className='linkText' style={{ color: 'white', fontSize: '27px' }}>Sign-Up As An Admin</Link></div>}
-            <div><Link to='/login' className='linkText' style={{ color: 'orange', fontSize: '27px' }}>Already Have an account? Login instead</Link></div>
+            <div><Link to='/login' className='linkText' style={{ color: 'orange', fontSize: '22px' }}>Already Have an account? Login instead</Link></div>
           </div>
 
         </div>

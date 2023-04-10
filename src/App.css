@@ -400,4 +400,21 @@ th{
   .abouttxt{
     width: 90%;
   }
+  .box-data{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+  .box-data img{
+    width: 31%;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    border: 3px solid rgb(95, 95, 95);
+  }
+  
+  .main-box{
+    width: 95%;
+  }
 }
